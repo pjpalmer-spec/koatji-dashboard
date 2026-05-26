@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.vite/
+
+# Local env (use .env.example as template, real value goes in Netlify UI)
+.env
+.env.local
+.env.*.local
+
+# Editor / OS junk
+.DS_Store
+.vscode/
+.idea/
+*.log

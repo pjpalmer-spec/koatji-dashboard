@@ -1,0 +1,21 @@
+# Netlify build config.
+#
+# Tells Netlify:
+#   - run `npm run build` to produce the site
+#   - serve the contents of `dist/` (Vite's output folder)
+#   - use Node 20 (current LTS as of 2026)
+#
+# The SPA redirect rule sends every URL to index.html, so React Router
+# (if you ever add it) works on hard refresh. Harmless without it.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
